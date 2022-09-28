@@ -64,6 +64,45 @@
                         </div>
 
                         <div class="mt-5">
+                            <label>Date</label>
+                            <br>
+                            <div class="flex">
+                                <div class="mb-3 xl:w-96">
+                                    <select class="form-select appearance-none
+                                        block
+                                        w-full
+                                        px-3
+                                        py-1.5
+                                        text-base
+                                        font-normal
+                                        text-gray-700
+                                        bg-white bg-clip-padding bg-no-repeat
+                                        border border-solid border-gray-300
+                                        rounded
+                                        transition
+                                        ease-in-out
+                                        m-0
+                                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+                                        aria-label="Default select example" name="day_post">
+                                        <option selected>Select day</option>
+                                        <option value="monday" @if ($post->day_post == 'monday') {{ 'selected' }} @endif>Monday</option>
+                                        <option value="tuesday" @if ($post->day_post == 'tuesday') {{ 'selected' }} @endif>Tuesday</option>
+                                        <option value="wednesday" @if ($post->day_post == 'wednesday') {{ 'selected' }} @endif>Wednesday</option>
+                                        <option value="thursday" @if ($post->day_post == 'thursday') {{ 'selected' }} @endif>Thursday</option>
+                                        <option value="friday" @if ($post->day_post == 'friday') {{ 'selected' }} @endif>Friday</option>
+                                        <option value="saturday" @if ($post->day_post == 'saturday') {{ 'selected' }} @endif>Saturday</option>
+                                        <option value="sunday" @if ($post->day_post == 'sunday') {{ 'selected' }} @endif>Sunday</option>
+                                    </select>
+                                </div>
+                            </div>
+                            @error('day_post')
+                            <div class="text-red-600 p-2 shadow-sm rounded mt-2">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        </div>
+
+                        <div class="mt-5">
                             <label>Time</label>
                             <br>
                             <input type="time" name="time_post" value="{{ $post->time_post }}"

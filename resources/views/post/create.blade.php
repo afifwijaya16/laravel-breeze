@@ -50,6 +50,45 @@
                         </div>
 
                         <div class="mt-5">
+                            <label>Day</label>
+                            <br>
+                            <div class="flex">
+                                <div class="mb-3 xl:w-96">
+                                    <select class="form-select appearance-none
+                                        block
+                                        w-full
+                                        px-3
+                                        py-1.5
+                                        text-base
+                                        font-normal
+                                        text-gray-700
+                                        bg-white bg-clip-padding bg-no-repeat
+                                        border border-solid border-gray-300
+                                        rounded
+                                        transition
+                                        ease-in-out
+                                        m-0
+                                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+                                        aria-label="Default select example" name="day_post">
+                                        <option selected>Select day</option>
+                                        <option value="monday">Monday</option>
+                                        <option value="tuesday">Tuesday</option>
+                                        <option value="wednesday">Wednesday</option>
+                                        <option value="thursday">Thursday</option>
+                                        <option value="friday">Friday</option>
+                                        <option value="saturday">Saturday</option>
+                                        <option value="sunday">Sunday</option>
+                                    </select>
+                                </div>
+                            </div>
+                            @error('day_post')
+                            <div class="text-red-600 p-2 shadow-sm rounded mt-2">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        </div>
+
+                        <div class="mt-5">
                             <label>Date</label>
                             <br>
                             <input type="date" name="date_post" value="{{ old('date_post') }}"

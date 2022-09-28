@@ -38,6 +38,7 @@ class PosttwitterController extends Controller
     {
         $this->validate($request, [
             'post' => 'required|max:240',
+            'day_post' => 'required',
             'date_post' => 'required',
             'time_post' => 'required',
             'image_post' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
@@ -50,6 +51,7 @@ class PosttwitterController extends Controller
             'post' => $request->post,
             'date_post' => $request->date_post,
             'time_post' => $request->time_post,
+            'day_post' => $request->day_post,
             'image_post' => 'assets/post-twitter/'.$new_image_post,
         ]);
 
@@ -94,6 +96,7 @@ class PosttwitterController extends Controller
         $this->validate($request, [
             'post' => 'required',
             'date_post' => 'required',
+            'day_post' => 'required',
             'time_post' => 'required',
             'image_post' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
@@ -108,12 +111,14 @@ class PosttwitterController extends Controller
             $post_data = [
                 'post' => $request->post,
                 'date_post' => $request->date_post,
+                'day_post' => $request->day_post,
                 'time_post' => $request->time_post,
                 'image_post' => 'assets/post-twitter/'.$new_image_post,
             ];
         } else {
             $post_data = [
                 'post' => $request->post,
+                'day_post' => $request->day_post,
                 'date_post' => $request->date_post,
                 'time_post' => $request->time_post,
             ];

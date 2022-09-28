@@ -13,6 +13,7 @@ class Posttwitter extends Model
         'post',
         'image_post',
         'date_post',
+        'day_post',
         'time_post',
     ];
 }

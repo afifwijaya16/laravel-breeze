@@ -17,6 +17,7 @@ class CreatePosttwittersTable extends Migration
             $table->id();
             $table->string('post', 240);
             $table->text('image_post')->nullable();
+            $table->string('day_post');
             $table->date('date_post');
             $table->time('time_post');
             $table->timestamps();

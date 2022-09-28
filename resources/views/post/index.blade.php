@@ -22,6 +22,7 @@
                                 <td class="border px-4 py-3">Post</td>
                                 <td class="border px-4 py-3">Image</td>
                                 <td class="border px-4 py-3">Time</td>
+                                <td class="border px-4 py-3">Day</td>
                                 <td class="border px-4 py-3">Date</td>
                                 <td class="border px-4 py-3">Action</td>
                             </tr>
@@ -37,6 +38,7 @@
                                     <img class="h-6 w-6 rounded-full" src="{{ asset($result->image_post) }}">
                                 </td>
                                 <td class="border px-6 py-4">{{$result->time_post}}</td>
+                                <td class="border px-6 py-4">{{$result->day_post }}</td>
                                 <td class="border px-6 py-4">{{$result->date_post }}</td>
                                 <td class="border px-6 py-4">
                                     <div class="flex item-center justify-center">

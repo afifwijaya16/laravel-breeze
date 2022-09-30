@@ -15,7 +15,7 @@ class CreatePosttwittersTable extends Migration
     {
         Schema::create('posttwitters', function (Blueprint $table) {
             $table->id();
-            $table->string('post', 240);
+            $table->string('post', 281);
             $table->text('image_post')->nullable();
             $table->string('day_post');
             $table->date('date_post');

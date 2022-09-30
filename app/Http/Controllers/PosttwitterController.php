@@ -37,7 +37,7 @@ class PosttwitterController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'post' => 'required|max:240',
+            'post' => 'required|max:281',
             'day_post' => 'required',
             'date_post' => 'required',
             'time_post' => 'required',

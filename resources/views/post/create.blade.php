@@ -40,7 +40,7 @@
                                 ease-in-out
                                 m-0
                                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                id="exampleFormControlTextarea1" rows="3" maxlength="240"
+                                id="exampleFormControlTextarea1" rows="3" maxlength="281"
                                 placeholder="Your message">{{ old('post') }}</textarea>
                             @error('post')
                             <div class="text-red-600 p-2 shadow-sm rounded mt-2">
